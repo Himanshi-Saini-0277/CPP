@@ -24,13 +24,10 @@ int prec(char ch){
 }
 
 void display(stack <char> stk){
-    string res = "";
     while (!stk.empty()) {
         cout << stk.top() << " ";
         stk.pop();
     }
-    reverse(res.begin(), res.end());
-    cout << res << endl;
 }
 
 void prefix(const char* c){
