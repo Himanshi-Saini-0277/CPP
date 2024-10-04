@@ -19,13 +19,6 @@ void inorder (struct Node* root){
     }
 }
 
-bool isBST(struct Node* root, int min, int max){
-    if (root == NULL) return true;
-    if (root->data <= min || root->data >= max) return false;
-
-    return (root->left, min, root->data) && (root->right, root->data, max);
-}
-
 void insertion(struct Node* root, int element){
     struct Node* prev = NULL;
     while (root != NULL){
@@ -50,7 +43,7 @@ void insertion(struct Node* root, int element){
 }
 
 int main(){
-    Node* b = new Node(2);
+    Node* b = new Node(1);
     Node* a = new Node(3);
     Node* c = new Node(4);
     Node* d = new Node(5);
@@ -62,7 +55,7 @@ int main(){
     inorder(a);
     cout << endl;
 
-    insertion(a, 1);
+    insertion(a, 2);
     inorder(a);
     cout << endl;
     
