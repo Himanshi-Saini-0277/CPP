@@ -1,4 +1,5 @@
 #include<iostream>
+#include<list>
 using namespace std;
 
 struct Node{
@@ -28,6 +29,25 @@ int main(){
     while(ptr != NULL){
         cout << ptr->data << " ";
         ptr = ptr->next;
+    }
+    cout << endl;
+
+    list<int> l;
+    l.push_back(5);
+    l.push_back(6);
+    l.push_front(2);
+    l.push_front(1);
+
+    for(int element : l){
+        cout << element << " ";
+    }
+    cout << endl;
+
+    l.pop_back();
+    l.pop_front();
+
+    for(int element : l){
+        cout << element << " ";
     }
     cout << endl;
 
